@@ -1,0 +1,8 @@
+services:
+  example_twig_service_debug.twig:
+    class: Drupal\example_twig_service_debug\Template\ExampleTwigServiceDebugTwigEnvironment
+    public: false
+    decorates: twig
+    arguments: ['@logger.factory', '@app.root', '@cache.default', '%twig_extension_hash%', '@state', '@twig.loader', '%twig.config%']
+    tags:
+      - { name: service_collector, tag: 'twig.extension', call: addExtension }

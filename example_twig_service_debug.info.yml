@@ -1,0 +1,4 @@
+name: Example Twig service debug
+type: module
+description: 'Provides a service decorator for Drupal core twig service.'
+core_version_requirement: ^8.8 || ^9
